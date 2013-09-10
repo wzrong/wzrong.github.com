@@ -4,7 +4,7 @@
   <title><![CDATA[卫志荣的博客]]></title>
   <link href="http://wzrong.github.io/atom.xml" rel="self"/>
   <link href="http://wzrong.github.io/"/>
-  <updated>2013-09-10T08:30:12+08:00</updated>
+  <updated>2013-09-10T08:36:10+08:00</updated>
   <id>http://wzrong.github.io/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
@@ -12,5 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[my frist blog]]></title>
+    <link href="http://wzrong.github.io/blog/2013/09/10/my-frist-blog/"/>
+    <updated>2013-09-10T08:33:00+08:00</updated>
+    <id>http://wzrong.github.io/blog/2013/09/10/my-frist-blog</id>
+    <content type="html"><![CDATA[<h1>这是我的第一篇Blog</h1>
+
+<p>折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！</p>
+]]></content>
+  </entry>
   
 </feed>
