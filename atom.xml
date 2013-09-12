@@ -4,14 +4,23 @@
   <title><![CDATA[卫志荣的博客]]></title>
   <link href="http://wzrong.github.io/atom.xml" rel="self"/>
   <link href="http://wzrong.github.io/"/>
-  <updated>2013-09-10T08:36:10+08:00</updated>
+  <updated>2013-09-12T14:37:26+08:00</updated>
   <id>http://wzrong.github.io/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
-    <email><![CDATA[wzrong@me.com]]></email>
+    
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[happy birthday]]></title>
+    <link href="http://wzrong.github.io/blog/2013/09/12/happy-birthday/"/>
+    <updated>2013-09-12T14:24:00+08:00</updated>
+    <id>http://wzrong.github.io/blog/2013/09/12/happy-birthday</id>
+    <content type="html"><![CDATA[<p>祝自己生日快乐！ Happy Birthday！</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[my frist blog]]></title>
