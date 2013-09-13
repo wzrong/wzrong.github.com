@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Wzrong's Blog]]></title>
-  <link href="http://wzrong.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Suibi | Wzrong's Blog]]></title>
+  <link href="http://wzrong.github.io/blog/categories/suibi/atom.xml" rel="self"/>
   <link href="http://wzrong.github.io/"/>
   <updated>2013-09-13T15:22:26+08:00</updated>
   <id>http://wzrong.github.io/</id>
@@ -19,15 +19,6 @@
     <updated>2013-09-12T08:30:00+08:00</updated>
     <id>http://wzrong.github.io/blog/2013/09/12/happy-birthday</id>
     <content type="html"><![CDATA[<p>祝自己生日快乐！ Happy Birthday！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My Frist Blog]]></title>
-    <link href="http://wzrong.github.io/blog/2013/09/10/my-frist-blog/"/>
-    <updated>2013-09-10T08:30:00+08:00</updated>
-    <id>http://wzrong.github.io/blog/2013/09/10/my-frist-blog</id>
-    <content type="html"><![CDATA[<p>折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！</p>
 ]]></content>
   </entry>
   
