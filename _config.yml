@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://wzrong.github.io
-title: 卫志荣的博客
+title: Wzrong's Blog
 subtitle: 感受生活，感悟工作，感触心灵.
 author: 卫志荣
 simple_search: http://google.com/search
@@ -17,9 +17,9 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
-subscribe_email: wzrong@me.com
+subscribe_email: 
 # RSS feeds can list your email address if you like
-email: wzrong@me.com
+email: 
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -68,10 +68,6 @@ github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
-# Twitter
-twitter_user:
-twitter_tweet_button: false
-
 # Google +1
 google_plus_one: false
 google_plus_one_size: medium
@@ -89,19 +85,10 @@ pinboard_count: 3
 delicious_user:
 delicious_count: 3
 
-# Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
-
-# Google Analytics
-google_analytics_tracking_id:
-
-# Facebook Like
-facebook_like: false
-
 # duoshuo comments
 duoshuo_comments: true
 duoshuo_short_name: wzrong
+
 
 duoshuo_asides_num: 10      # 侧边栏评论显示条目数
 duoshuo_asides_avatars: 0   # 侧边栏评论是否显示头像
@@ -109,3 +96,4 @@ duoshuo_asides_time: 0      # 侧边栏评论是否显示时间
 duoshuo_asides_title: 0     # 侧边栏评论是否显示标题
 duoshuo_asides_admin: 0     # 侧边栏评论是否显示作者评论
 duoshuo_asides_length: 18   # 侧边栏评论截取的长度
+
