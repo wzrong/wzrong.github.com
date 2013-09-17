@@ -205,20 +205,80 @@ permalink: /blog/:year/:month/:day/:title/   # 文章的固定连接形式
 
 <p>暂时不换了，换的时候再考虑吧。</p>
 
+<h3>3、添加多说评论</h3>
+
+<p>在 <code>_config.yml</code> 中添加</p>
+
+<pre><code># duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: yourname
+</code></pre>
+
+<p>替换 <code>source/_layouts/post.html</code> 中的 <code>disqus</code> 代码</p>
+
+<pre><code>{ % if site.disqus_short_name and page.comments == true % }
+    &lt;section&gt;
+        &lt;h1&gt;Comments&lt;/h1&gt;
+        &lt;div id="disqus_thread" aria-live="polite"&gt;{ % include post/disqus_thread.html % }&lt;/div&gt;
+    &lt;/section&gt;
+{ % endif % }
+</code></pre>
+
+<p>为下方的 <code>多说评论</code> 模块</p>
+
+<pre><code>{ % if site.duoshuo_short_name and site.duoshuo_comments == true and page.comments == true % }
+    &lt;section&gt;
+        &lt;div id="comments" aria-live="polite"&gt;{ % include post/duoshuo.html % }&lt;/div&gt;
+    &lt;/section&gt;
+{ % endif % }
+</code></pre>
+
+<p>在路径 <code>source/_includes/post/</code> 下创建一个 <code>duoshuo.html</code> 页面，并加入以下代码：</p>
+
+<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
+{ % if site.duoshuo_short_name % }        
+&lt;div class="ds-thread" data-title="{ % if site . title case % }{ % else % }{ % end if % }"&gt;&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    var duoshuoQuery = {short_name:"wzrong"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+&lt;/script&gt;    
+{ % endif % }
+&lt;!-- Duoshuo Comment END --&gt;    
+</code></pre>
+
+<p>然后再修改 <code>source/_layouts/post.html</code> 文件，在标签 <code>&lt;/article&gt;</code> 下边添加以下<code>多说评论</code>代码：</p>
+
+<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
+{ % if site.duoshuo_short_name and page.comments == true % }
+    &lt;section id="comment"&gt;
+        { % include post/duoshuo.html % }
+    &lt;/section&gt;
+{ % endif % }   
+&lt;!-- Duoshuo Comment END --&gt;
+</code></pre>
+
+<p>到此 <code>多说评论</code> 在 Octopress 中已经设置完成，接下来去<a href="http://duoshuo.com">多说网</a>注册一个账号，添加站点，获取 <code>duoshuo_short_name</code>。</p>
+
 <h3>4、添加版权声明</h3>
 
 <p>这里所说的版权声明是指添加在每篇文章后面的版权信息。  <br/>
-首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：
-&lt;co</p>
+首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：</p>
 
 <pre><code>&lt;!-- Copyright Info BEGIN --&gt;
-
-&lt;p class="post-footer"&gt;
-    原文地址：&lt;a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"&gt; http://wzrong.me/blog/2013/09/10/octopress-blog/ &lt;/a&gt;
+{ % if site.post_license % }
+&lt; p class="post-footer"&gt;
+    原文地址：&lt; a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"&gt; http://wzrong.me/blog/2013/09/10/octopress-blog/ &lt;/a &gt;
     &lt;br /&gt;
-    &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;&lt;/a&gt;版权声明：自由转载-非商用-非衍生-保持署名 | &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;Creative Commons BY-NC-ND 3.0&lt;/a&gt; | &lt;img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /&gt;
+    &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" &gt;&lt;/a&gt;版权声明：自由转载-非商用-非衍生-保持署名 | &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" &gt;Creative Commons BY-NC-ND 3.0 &lt;/a&gt; | &lt;img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /&gt;
 &lt;/p&gt;
-
+{ % endif % }
 &lt;!-- Copyright Info END --&gt;
 </code></pre>
 
@@ -229,52 +289,16 @@ permalink: /blog/:year/:month/:day/:title/   # 文章的固定连接形式
 }
 </code></pre>
 
-<p>修改文件 <code>source/_layouts/post.html</code>，在 `
-  <header></p>
-
-<pre><code>  &lt;h1 class="entry-title"&gt;Octopress Blog&lt;/h1&gt;
-
-
-  &lt;p class="meta"&gt;
-</code></pre>
-
-<p><time datetime="2013-09-10T08:30:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2013</time></p>
-
-<pre><code>  &lt;/p&gt;
-</code></pre>
-
-<p>  </header></p>
-
-<div class="entry-content"></div>
-
-
-<p><code>下边添加</code></p>
-
-<!-- Copyright Info BEGIN -->
-
-
-
-
-<p class="post-footer">
-        原文地址：<a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"> http://wzrong.me/blog/2013/09/10/octopress-blog/ </a>
-        <br />
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"></a>版权声明：自由转载-非商用-非衍生-保持署名 | <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a> | <img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" />
-</p>
-
-
-
-
-<!-- Copyright Info END -->
-
-
-<p><code>   
-在</code>_config.yml` 添加配置项来控制是否显示页面的版权信息</p>
+<p>修改文件 <code>source/_layouts/post.html</code>，在 <code>{ % include article.html %}</code> 下边添加 <code>{ % include post/license.html % }</code>  <br/>
+在 <code>_config.yml</code> 添加配置项来控制是否显示页面的版权信息</p>
 
 <pre><code># Post License
 post_license: true
 </code></pre>
 
 <p>至此版权信息添加完成，效果与本blog一致。</p>
+
+<blockquote><p>特别说明：文中有遇到 <code>{ %</code> 与 <code>% }</code> 的情况时，请自行把<code>{</code>和<code>%</code>之间的空格去掉。由于编写时候有编译错误，故加了空格，抱歉。</p></blockquote>
 </div>
 
 
