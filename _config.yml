@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://wzrong.github.io
+url: http://wzrong.me
 title: Wzrong's Blog
 subtitle: 感受生活，感悟工作，感触心灵.
 author: 卫志荣
@@ -98,6 +98,10 @@ duoshuo_asides_admin: 0     # 侧边栏评论是否显示作者评论
 duoshuo_asides_length: 18   # 侧边栏评论截取的长度
 
 
+#Post License 显示页面的版权信息
+post_license: true
+
+
 # ----------------------- #
 #    Categories           #
 # ----------------------- #
@@ -112,4 +116,4 @@ category_title: Categories
 category_sidebar: true
 # create an include categories tag cloud page in @source/_includes/asides/categories_tag.html
 # and don't forget to add 'asides/categories_tag.html' to @default_asides if you want to enable it.
-category_tag_cloud: false
+category_tag_cloud: true
