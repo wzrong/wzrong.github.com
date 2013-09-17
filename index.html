@@ -129,9 +129,69 @@
   </header>
 
 
-  <div class="entry-content"><p>折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！</p>
-</div>
+  <div class="entry-content"><p>  折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！
+搭建过程有点不顺利，主要是由于ruby版本不一致以及蜗牛一样的网速（还经常断掉）导致的。</p>
+
+<h2>搭建环境</h2>
+
+<blockquote><p>工欲善其事，必先利其器</p></blockquote>
+
+<p>1、安装 GitHub <br/>
+下载地址：<a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a>，下载后直接安装就OK了。 <br/>
+2、安装 Ruby  <br/>
+我的Mac自带的是ruby 1.8.7(终端查看ruby版本：<code>ruby --version</code>)，按照官网要求安装ruby 1.9.3。  <br/>
+安装方法：<a href="http://octopress.org/docs/setup/rvm/">http://octopress.org/docs/setup/rvm/</a>
+先安装RVM(Ruby Version Manager):</p>
+
+<pre><code>curl -L https://get.rvm.io | bash -s stable --ruby
+</code></pre>
+
+<p>在安装Ruby 1.9.3</p>
+
+<pre><code>rvm install 1.9.3   #安装1.9.3版本的ruby
+rvm use 1.9.3 #如果有多个版本的ruby，使用1.9.3版本的
+rvm rubygems latest
+</code></pre>
+
+<p>3、Mou <br/>
+Markdown编辑软件，用于编辑文章，我现在就在用该软件编写了，很棒的，所见即所得。  下载地址：<a href="http://mouapp.com">http://mouapp.com</a></p>
+
+<h2>安装Octopress</h2>
+
+<blockquote><p>一切按照官方的文档安装就OK了，官方文档地址：<a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p></blockquote>
+
+<p>在终端输入git命令，安装Octopress，安装完成后跳转到 Octopress 所在目录中。</p>
+
+<pre><code>git clone git://github.com/imathis/octopress.git  octopress
+cd octopress #跳转到 octopress 目录
+</code></pre>
+
+<p>安装依赖项</p>
+
+<pre><code>gem install bundler #
+bundle install #会安装很多，这个地方最有可能失败了，没关系，多按几次就OK了。
+</code></pre>
+
+<p>如果之前你的ruby环境安装成功，那么此处会有绿色的字体提示。接下来安装默认主题：</p>
+
+<pre><code>rake install
+</code></pre>
+
+<h2>Creat New Repositories On The Github</h2>
+
+<p>登录Github，创建一个新的存储库，命名为：<code>username.github.com</code>，只有这种格式的命名才能在运行命令 <code>rake setup_github_pages</code> 之后自动创建 <strong>master</strong>和<strong>source</strong>分支，否则为作为普通仓库生成 <strong>gh-pages</strong>分支。 <br/>
+打开客户端软件Github，点击底部的 + &ndash;> Creat New Repositories…，填写 <br/>
+Name: username.github.com <br/>
+Description: blog <br/>
+Local Path: 指定到磁盘的某一位置 <br/>
+然后创建即可。</p>
+
+<p> </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/09/10/octopress-blog/">Read on &rarr;</a>
+    </footer>
   
 
 
