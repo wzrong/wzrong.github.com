@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Markdown | Wzrong's Blog]]></title>
   <link href="http://wzrong.me/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://wzrong.me/"/>
-  <updated>2013-09-18T00:22:01+08:00</updated>
+  <updated>2013-09-18T00:36:33+08:00</updated>
   <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
@@ -143,21 +143,30 @@ duoshuo_short_name: yourname
 
 <p>替换 <code>source/_layouts/post.html</code> 中的 <code>disqus</code> 代码</p>
 
-<pre><code>
+<pre><code>{% if site.disqus_short_name and page.comments == true %}
+    &lt;section&gt;
+        &lt;h1&gt;Comments&lt;/h1&gt;
+        &lt;div id="disqus_thread" aria-live="polite"&gt;{% include post/disqus_thread.html %}&lt;/div&gt;
+    &lt;/section&gt;
+{% endif %}
 </code></pre>
 
 <p>为下方的 <code>多说评论</code> 模块</p>
 
-<pre><code>
+<pre><code>{% if site.duoshuo_short_name and site.duoshuo_comments == true and page.comments == true %}
+    &lt;section&gt;
+        &lt;div id="comments" aria-live="polite"&gt;{% include post/duoshuo.html %}&lt;/div&gt;
+    &lt;/section&gt;
+{% endif %}
 </code></pre>
 
 <p>在路径 <code>source/_includes/post/</code> 下创建一个 <code>duoshuo.html</code> 页面，并加入以下代码：</p>
 
 <pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
-        
-
+{% if site.duoshuo_short_name %}        
+&lt;div class="ds-thread" data-title="{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}"&gt;&lt;/div&gt;
 &lt;script type="text/javascript"&gt;
-    var duoshuoQuery = {short_name:"wzrong"};
+    var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
     (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
@@ -167,14 +176,18 @@ duoshuo_short_name: yourname
         || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
 &lt;/script&gt;    
-
-&lt;!-- Duoshuo Comment     END --&gt;    
+{% endif %}
+&lt;!-- Duoshuo Comment END --&gt;    
 </code></pre>
 
 <p>然后再修改 <code>source/_layouts/post.html</code> 文件，在标签 <code>&lt;/article&gt;</code> 下边添加以下<code>多说评论</code>代码：</p>
 
 <pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
- 
+{% if site.duoshuo_short_name and page.comments == true %}
+    &lt;section id="comment"&gt;
+        {% include post/duoshuo.html %}
+    &lt;/section&gt;
+{% endif %} 
 &lt;!-- Duoshuo Comment END --&gt;
 </code></pre>
 
@@ -186,13 +199,13 @@ duoshuo_short_name: yourname
 首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：</p>
 
 <pre><code>&lt;!-- Copyright Info BEGIN --&gt;
-
+{% if site.post_license %}
 &lt;p class="post-footer"&gt;
-    原文地址：&lt;a href="http://wzrong.meblog/categories/markdown/atom.xml"&gt; http://wzrong.meblog/categories/markdown/atom.xml &lt;/a&gt;
+    原文地址：&lt;a href="{{site.url}}{{ page.url }}"&gt; {{site.url}}{{ page.url }} &lt;/a&gt;
     &lt;br /&gt;
     &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;&lt;/a&gt;版权声明：自由转载-非商用-非衍生-保持署名 | &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;Creative Commons BY-NC-ND 3.0&lt;/a&gt; | &lt;img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /&gt;
 &lt;/p&gt;
-
+{% endif %}
 &lt;!-- Copyright Info END --&gt;
 </code></pre>
 
@@ -203,42 +216,7 @@ duoshuo_short_name: yourname
 }
 </code></pre>
 
-<p>修改文件 <code>source/_layouts/post.html</code>，在 <code>
-  <header>
-    
-      <h1 class="entry-title">Category: Markdown</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-
-
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"></div>
-
-</code> 下边添加 <code>
-<!-- Copyright Info BEGIN -->
-
-<p class="post-footer">
-        原文地址：<a href="http://wzrong.meblog/categories/markdown/atom.xml"> http://wzrong.meblog/categories/markdown/atom.xml </a>
-        <br />
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"></a>版权声明：自由转载-非商用-非衍生-保持署名 | <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a> | <img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" />
-</p>
-
-<!-- Copyright Info END -->
-</code>  <br/>
+<p>修改文件 <code>source/_layouts/post.html</code>，在 <code>{% include article.html %}</code> 下边添加 <code>{% include post/license.html %}</code>  <br/>
 在 <code>_config.yml</code> 添加配置项来控制是否显示页面的版权信息</p>
 
 <pre><code># Post License

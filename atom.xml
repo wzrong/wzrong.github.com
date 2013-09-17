@@ -4,7 +4,7 @@
   <title><![CDATA[Wzrong's Blog]]></title>
   <link href="http://wzrong.me/atom.xml" rel="self"/>
   <link href="http://wzrong.me/"/>
-  <updated>2013-09-18T00:22:01+08:00</updated>
+  <updated>2013-09-18T00:32:39+08:00</updated>
   <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
@@ -141,110 +141,11 @@ permalink: /blog/:year/:month/:day/:title/   # 文章的固定连接形式
 
 <p>暂时不换了，换的时候再考虑吧。</p>
 
-<h3>3、添加多说评论</h3>
-
-<p>在 <code>_config.yml</code> 中添加</p>
-
-<pre><code># duoshuo comments
-duoshuo_comments: true
-duoshuo_short_name: yourname
-</code></pre>
-
-<p>替换 <code>source/_layouts/post.html</code> 中的 <code>disqus</code> 代码</p>
-
-<p>为下方的 <code>多说评论</code> 模块</p>
-
-<pre><code>    &lt;section&gt;
-        &lt;div id="comments" aria-live="polite"&gt;
-</code></pre>
-
-<!-- Duoshuo Comment BEGIN -->
-
-
-<div class="ds-thread" id="ds-thread"></div>
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"wzrong"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
-
-
-<!-- Duoshuo Comment END -->
-
-
-<p></div></p>
-
-<pre><code>    &lt;/section&gt;
-</code></pre>
-
-<p>在路径 <code>source/_includes/post/</code> 下创建一个 <code>duoshuo.html</code> 页面，并加入以下代码：</p>
-
-<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
-
-
-&lt;script type="text/javascript"&gt;
-    var duoshuoQuery = {short_name:"wzrong"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = 'http://static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-&lt;/script&gt;    
-
-&lt;!-- Duoshuo Comment     END --&gt;    
-</code></pre>
-
-<p>然后再修改 <code>source/_layouts/post.html</code> 文件，在标签 <code>&lt;/article&gt;</code> 下边添加以下<code>多说评论</code>代码：</p>
-
-<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
-
-    &lt;section id="comment"&gt;
-</code></pre>
-
-<!-- Duoshuo Comment BEGIN -->
-
-
-<div class="ds-thread" id="ds-thread"></div>
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"wzrong"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
-
-
-<!-- Duoshuo Comment END -->
-
-
-<pre><code>    &lt;/section&gt;
-
-&lt;!-- Duoshuo Comment END --&gt;
-</code></pre>
-
-<p>到此 <code>多说评论</code> 在 Octopress 中已经设置完成，接下来去<a href="http://duoshuo.com">多说网</a>注册一个账号，添加站点，获取 <code>duoshuo_short_name</code>。</p>
-
 <h3>4、添加版权声明</h3>
 
 <p>这里所说的版权声明是指添加在每篇文章后面的版权信息。  <br/>
-首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：</p>
+首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：
+&lt;co</p>
 
 <pre><code>&lt;!-- Copyright Info BEGIN --&gt;
 
