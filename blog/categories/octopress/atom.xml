@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Wzrong's Blog]]></title>
   <link href="http://wzrong.me/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://wzrong.me/"/>
-  <updated>2013-09-17T13:15:10+08:00</updated>
+  <updated>2013-09-17T13:16:52+08:00</updated>
   <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My Frist Blog]]></title>
-    <link href="http://wzrong.me/blog/2013/09/10/my-frist-blog/"/>
+    <title type="html"><![CDATA[Octopress Blog]]></title>
+    <link href="http://wzrong.me/blog/2013/09/10/octopress-blog/"/>
     <updated>2013-09-10T08:30:00+08:00</updated>
-    <id>http://wzrong.me/blog/2013/09/10/my-frist-blog</id>
+    <id>http://wzrong.me/blog/2013/09/10/octopress-blog</id>
     <content type="html"><![CDATA[<p>折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！</p>
 ]]></content>
   </entry>
