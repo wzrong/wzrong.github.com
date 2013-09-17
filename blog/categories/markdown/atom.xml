@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Markdown | Wzrong's Blog]]></title>
-  <link href="http://wzrong.github.io/blog/categories/markdown/atom.xml" rel="self"/>
-  <link href="http://wzrong.github.io/"/>
-  <updated>2013-09-13T15:24:40+08:00</updated>
-  <id>http://wzrong.github.io/</id>
+  <link href="http://wzrong.me/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://wzrong.me/"/>
+  <updated>2013-09-17T12:24:27+08:00</updated>
+  <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My Frist Blog]]></title>
-    <link href="http://wzrong.github.io/blog/2013/09/10/my-frist-blog/"/>
+    <link href="http://wzrong.me/blog/2013/09/10/my-frist-blog/"/>
     <updated>2013-09-10T08:30:00+08:00</updated>
-    <id>http://wzrong.github.io/blog/2013/09/10/my-frist-blog</id>
+    <id>http://wzrong.me/blog/2013/09/10/my-frist-blog</id>
     <content type="html"><![CDATA[<p>折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！</p>
 ]]></content>
   </entry>

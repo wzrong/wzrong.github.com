@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://wzrong.github.io/sitemap.xml 
+Sitemap: http://wzrong.me/sitemap.xml 

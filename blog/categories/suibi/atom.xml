@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Suibi | Wzrong's Blog]]></title>
-  <link href="http://wzrong.github.io/blog/categories/suibi/atom.xml" rel="self"/>
-  <link href="http://wzrong.github.io/"/>
-  <updated>2013-09-13T15:24:40+08:00</updated>
-  <id>http://wzrong.github.io/</id>
+  <link href="http://wzrong.me/blog/categories/suibi/atom.xml" rel="self"/>
+  <link href="http://wzrong.me/"/>
+  <updated>2013-09-17T12:24:27+08:00</updated>
+  <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Happy Birthday]]></title>
-    <link href="http://wzrong.github.io/blog/2013/09/12/happy-birthday/"/>
+    <link href="http://wzrong.me/blog/2013/09/12/happy-birthday/"/>
     <updated>2013-09-12T08:30:00+08:00</updated>
-    <id>http://wzrong.github.io/blog/2013/09/12/happy-birthday</id>
+    <id>http://wzrong.me/blog/2013/09/12/happy-birthday</id>
     <content type="html"><![CDATA[<p>祝自己生日快乐！ Happy Birthday！</p>
 ]]></content>
   </entry>
