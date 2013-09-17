@@ -4,7 +4,7 @@
   <title><![CDATA[Wzrong's Blog]]></title>
   <link href="http://wzrong.me/atom.xml" rel="self"/>
   <link href="http://wzrong.me/"/>
-  <updated>2013-09-17T22:44:42+08:00</updated>
+  <updated>2013-09-18T00:22:01+08:00</updated>
   <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
@@ -75,7 +75,7 @@ bundle install #会安装很多，这个地方最有可能失败了，没关系�
 <pre><code>rake install
 </code></pre>
 
-<h2>Creat New Repositories On The Github</h2>
+<h2>在Github上创建一个新的Repositories</h2>
 
 <p>登录Github，创建一个新的存储库，命名为：<code>username.github.com</code>，只有这种格式的命名才能在运行命令 <code>rake setup_github_pages</code> 之后自动创建 <strong>master</strong>和<strong>source</strong>分支，否则为作为普通仓库生成 <strong>gh-pages</strong>分支。 <br/>
 打开客户端软件Github，点击底部的 + &ndash;> Creat New Repositories…，填写 <br/>
@@ -119,7 +119,9 @@ git push origin source
 
 <h2>Ocotpress博客配置</h2>
 
-<p>1、blog的基本设置是在Octopress根目录的主配置文件<code>_config.yml</code>中，所以我们需要修改配置文件<code>_config.yml</code>。</p>
+<h3>1、blog的基本设置</h3>
+
+<p>blog的基本设置是在Octopress根目录的主配置文件<code>_config.yml</code>中，所以我们需要修改配置文件<code>_config.yml</code>。</p>
 
 <h3>需要特别说明的是: yml格式默认是：参数 + : + 空格，如果不加空格，编译会报错。</h3>
 
@@ -135,13 +137,15 @@ root: /     # 博客路径，默认为 "/"，如果你的blog在子目录中，�
 permalink: /blog/:year/:month/:day/:title/   # 文章的固定连接形式
 </code></pre>
 
-<p>2、更换主题  <br/>
-暂时不换了，换的时候再考虑吧。</p>
+<h3>2、更换主题</h3>
 
-<p>3、添加多说评论 <br/>
-在 <code>_config.yml</code> 中添加</p>
+<p>暂时不换了，换的时候再考虑吧。</p>
 
-<pre><code>#duoshuo comments
+<h3>3、添加多说评论</h3>
+
+<p>在 <code>_config.yml</code> 中添加</p>
+
+<pre><code># duoshuo comments
 duoshuo_comments: true
 duoshuo_short_name: yourname
 </code></pre>
@@ -181,9 +185,131 @@ duoshuo_short_name: yourname
 <pre><code>    &lt;/section&gt;
 </code></pre>
 
-<p>在路径 <code>source/_includes/post/</code> 下边创建一个 <code>duoshuo.html</code> 页面，并加入以下代码：</p>
+<p>在路径 <code>source/_includes/post/</code> 下创建一个 <code>duoshuo.html</code> 页面，并加入以下代码：</p>
 
-<h2>绑定域名</h2>
+<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
+
+
+&lt;script type="text/javascript"&gt;
+    var duoshuoQuery = {short_name:"wzrong"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+&lt;/script&gt;    
+
+&lt;!-- Duoshuo Comment     END --&gt;    
+</code></pre>
+
+<p>然后再修改 <code>source/_layouts/post.html</code> 文件，在标签 <code>&lt;/article&gt;</code> 下边添加以下<code>多说评论</code>代码：</p>
+
+<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
+
+    &lt;section id="comment"&gt;
+</code></pre>
+
+<!-- Duoshuo Comment BEGIN -->
+
+
+<div class="ds-thread" id="ds-thread"></div>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"wzrong"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+<!-- Duoshuo Comment END -->
+
+
+<pre><code>    &lt;/section&gt;
+
+&lt;!-- Duoshuo Comment END --&gt;
+</code></pre>
+
+<p>到此 <code>多说评论</code> 在 Octopress 中已经设置完成，接下来去<a href="http://duoshuo.com">多说网</a>注册一个账号，添加站点，获取 <code>duoshuo_short_name</code>。</p>
+
+<h3>4、添加版权声明</h3>
+
+<p>这里所说的版权声明是指添加在每篇文章后面的版权信息。  <br/>
+首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：</p>
+
+<pre><code>&lt;!-- Copyright Info BEGIN --&gt;
+
+&lt;p class="post-footer"&gt;
+    原文地址：&lt;a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"&gt; http://wzrong.me/blog/2013/09/10/octopress-blog/ &lt;/a&gt;
+    &lt;br /&gt;
+    &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;&lt;/a&gt;版权声明：自由转载-非商用-非衍生-保持署名 | &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"&gt;Creative Commons BY-NC-ND 3.0&lt;/a&gt; | &lt;img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /&gt;
+&lt;/p&gt;
+
+&lt;!-- Copyright Info END --&gt;
+</code></pre>
+
+<p>在 <code>sass/custom/</code> 中的 <code>_style.css</code> 文件中添加以下样式来设置版权信息的样式</p>
+
+<pre><code>.post-footer{
+    background: #ccc;
+}
+</code></pre>
+
+<p>修改文件 <code>source/_layouts/post.html</code>，在 `
+  <header></p>
+
+<pre><code>  &lt;h1 class="entry-title"&gt;Octopress Blog&lt;/h1&gt;
+
+
+  &lt;p class="meta"&gt;
+</code></pre>
+
+<p><time datetime="2013-09-10T08:30:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2013</time></p>
+
+<pre><code>  &lt;/p&gt;
+</code></pre>
+
+<p>  </header></p>
+
+<div class="entry-content"></div>
+
+
+<p><code>下边添加</code></p>
+
+<!-- Copyright Info BEGIN -->
+
+
+
+
+<p class="post-footer">
+        原文地址：<a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"> http://wzrong.me/blog/2013/09/10/octopress-blog/ </a>
+        <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"></a>版权声明：自由转载-非商用-非衍生-保持署名 | <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a> | <img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" />
+</p>
+
+
+
+
+<!-- Copyright Info END -->
+
+
+<p><code>   
+在</code>_config.yml` 添加配置项来控制是否显示页面的版权信息</p>
+
+<pre><code># Post License
+post_license: true
+</code></pre>
+
+<p>至此版权信息添加完成，效果与本blog一致。</p>
 ]]></content>
   </entry>
   
