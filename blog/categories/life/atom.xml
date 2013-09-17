@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Suibi | Wzrong's Blog]]></title>
-  <link href="http://wzrong.me/blog/categories/suibi/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Life | Wzrong's Blog]]></title>
+  <link href="http://wzrong.me/blog/categories/life/atom.xml" rel="self"/>
   <link href="http://wzrong.me/"/>
-  <updated>2013-09-17T12:35:19+08:00</updated>
+  <updated>2013-09-17T13:14:11+08:00</updated>
   <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
