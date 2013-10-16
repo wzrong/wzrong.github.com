@@ -4,7 +4,7 @@
   <title><![CDATA[Wzrong's Blog]]></title>
   <link href="http://wzrong.me/atom.xml" rel="self"/>
   <link href="http://wzrong.me/"/>
-  <updated>2013-09-18T01:27:10+08:00</updated>
+  <updated>2013-10-16T17:23:11+08:00</updated>
   <id>http://wzrong.me/</id>
   <author>
     <name><![CDATA[卫志荣]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[典型的五种广告形式：CPC、CPM、CPA、CPS、CPT ]]></title>
+    <link href="http://wzrong.me/blog/2013/10/16/dian-xing-de-wu-chong-yan-gao-xing-shi/"/>
+    <updated>2013-10-16T16:59:00+08:00</updated>
+    <id>http://wzrong.me/blog/2013/10/16/dian-xing-de-wu-chong-yan-gao-xing-shi</id>
+    <content type="html"><![CDATA[<blockquote><p>今天扫一下忙，了解一下一些网络广告术语</p></blockquote>
+
+<h2>CPC（按点击付费）</h2>
+
+<p>CPC—英文全称Cost Per Click；Cost Per Thousand Click-Through。CPC是一种点击付费广告，根据广告被点击的次数收费。如关键词广告一般采用这种定价模式，比较典型的有Google广告联盟的AdSense for Content和百度联盟的百度竞价广告。</p>
+
+<h2>CPM（按展示付费）</h2>
+
+<p>CPM—英文全称Cost Per ThousandImpression。CPM是一种展示付费广告，只要展示了广告主的广告内容，广告主就为此付费。这种广告的效果不是很好，但是却能给有一定流量的网站、博客带来稳定的收入。只做CPM广告的联盟不是很多，像太极联盟就有CPM广告。</p>
+
+<h2>CPA（按行为付费）</h2>
+
+<p>CPA—英文全称Cost PerAction。CPA是一种按广告投放实际效果计价方式的广告，即按回应的有效问卷或定单来计费，而不限广告投放量。CPA的计价方式对于网站而言有一定的风险，但若广告投放成功，其收益也比CPM的计 价方式要大得多。国内最好的CPA广告联盟当属CHANet成果网。</p>
+
+<h2>CPS（按销售付费）</h2>
+
+<p>CPS—英文全称Cost Per Sales。CPS是一种以实际销售产品数量来计算广告费用的广告，这种广告更多的适合购物类、导购类、网址导航类的网站，需要精准的流量才能带来转化。卓越网站联盟、当当网站联盟当属这种广告形式的典型代表。</p>
+
+<h2>CPT（按时长付费）</h2>
+
+<p>CPT—英文全称Cost Per Time。 CPT是一种以时间来计费的广告，国内很多的网站都是按照“一个月多少钱”这种固定收费模式来收费的，这种广告形式很粗糙，无法保障客户的利益。但是CPT的确是一种很省心的广告，能给你的网站、博客带来稳定的收入。阿里妈妈的按周计费广告和门户网站的包月广告都属于这种CPT广告。</p>
+
+<p>广告形式的变化体现了互联网广告发展的趋势，即：广告永远朝着广告主利益和效果最大化的方向发展。作为站长，我们要做的只是做好自己的站，选择最好的广告联盟而已！</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Happy Birthday]]></title>
