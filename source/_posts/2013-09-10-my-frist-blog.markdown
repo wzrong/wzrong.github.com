@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Frist Blog"
-date: 2013-09-10 08:30
+date: 2013-09-10 09:30
 comments: true
 categories: Octopress Markdown
 ---
