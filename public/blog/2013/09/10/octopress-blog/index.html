@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress Blog - Wzrong's Blog</title>
+  <meta name="author" content="卫志荣">
+
+  
+  <meta name="description" content="Octopress Blog Sep 10th, 2013 折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！
+搭建过程有点不顺利，主要是由于ruby版本不一致以及蜗牛一样的网速（还经常断掉）导致的。 搭建环境 工欲善其事，必先利其器 1、安装 GitHub 下载地址：https &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://wzrong.me/blog/2013/09/10/octopress-blog">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Wzrong's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Wzrong's Blog</a></h1>
+  
+    <h2>感受生活，感悟工作，感触心灵.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:wzrong.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">首页</a></li>
+  <li><a href="/blog/archives">归档</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopress Blog</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-10T08:30:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2013</time>
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>  折腾了一天，blog终于搞定了，写点文字，纪念一下这该死的过程！
+搭建过程有点不顺利，主要是由于ruby版本不一致以及蜗牛一样的网速（还经常断掉）导致的。</p>
+
+<h2>搭建环境</h2>
+
+<blockquote><p>工欲善其事，必先利其器</p></blockquote>
+
+<p>1、安装 GitHub <br/>
+下载地址：<a href="https://help.github.com/articles/set-up-git">https://help.github.com/articles/set-up-git</a>，下载后直接安装就OK了。 <br/>
+2、安装 Ruby  <br/>
+我的Mac自带的是ruby 1.8.7(终端查看ruby版本：<code>ruby --version</code>)，按照官网要求安装ruby 1.9.3。  <br/>
+安装方法：<a href="http://octopress.org/docs/setup/rvm/">http://octopress.org/docs/setup/rvm/</a>
+先安装RVM(Ruby Version Manager):</p>
+
+<pre><code>curl -L https://get.rvm.io | bash -s stable --ruby
+</code></pre>
+
+<p>在安装Ruby 1.9.3</p>
+
+<pre><code>rvm install 1.9.3   #安装1.9.3版本的ruby
+rvm use 1.9.3 #如果有多个版本的ruby，使用1.9.3版本的
+rvm rubygems latest
+</code></pre>
+
+<p>3、Mou <br/>
+Markdown编辑软件，用于编辑文章，我现在就在用该软件编写了，很棒的，所见即所得。  下载地址：<a href="http://mouapp.com">http://mouapp.com</a></p>
+
+<h2>安装Octopress</h2>
+
+<blockquote><p>一切按照官方的文档安装就OK了，官方文档地址：<a href="http://octopress.org/docs/setup/">http://octopress.org/docs/setup/</a></p></blockquote>
+
+<p>在终端输入git命令，安装Octopress，安装完成后跳转到 Octopress 所在目录中。</p>
+
+<pre><code>git clone git://github.com/imathis/octopress.git  octopress
+cd octopress #跳转到 octopress 目录
+</code></pre>
+
+<p>安装依赖项</p>
+
+<pre><code>gem install bundler #
+bundle install #会安装很多，这个地方最有可能失败了，没关系，多按几次就OK了。
+</code></pre>
+
+<p>如果之前你的ruby环境安装成功，那么此处会有绿色的字体提示。接下来安装默认主题：</p>
+
+<pre><code>rake install
+</code></pre>
+
+<h2>在Github上创建一个新的Repositories</h2>
+
+<p>登录Github，创建一个新的存储库，命名为：<code>username.github.com</code>，只有这种格式的命名才能在运行命令 <code>rake setup_github_pages</code> 之后自动创建 <strong>master</strong>和<strong>source</strong>分支，否则为作为普通仓库生成 <strong>gh-pages</strong>分支。 <br/>
+打开客户端软件Github，点击底部的 + &ndash;> Creat New Repositories…，填写 <br/>
+Name: username.github.com <br/>
+Description: blog <br/>
+Local Path: 指定到磁盘的某一位置 <br/>
+然后创建即可。</p>
+
+<p> <!-- more --></p>
+
+<h2>发布Octopress到Github</h2>
+
+<p>在终端输入如下命令：</p>
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<p>1、按照提示输入刚才新建的仓库地址，类似：<a href="https://github.com/username/username.github.com.git">https://github.com/username/username.github.com.git</a>  <br/>
+2、接着输入以下命令：</p>
+
+<pre><code>rake generate #生成静态页面
+rake preview #用来本地浏览，按Control+C终止。 
+</code></pre>
+
+<p>本地浏览默认网站为：<a href="http://localhost:4000">http://localhost:4000</a>
+3、输入以下命令，发布blog到Github上：</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<p>这样blog生成的内容会自动发布到master分支，并且可以使用 <a href="http://username.github.com">http://username.github.com</a>访问啦。
+4、把所有源文件发布到source分支下：</p>
+
+<pre><code>git add .
+git commit -m "message"
+git push origin source
+</code></pre>
+
+<p>到目前为止，blog以发布完成。可能有部分同学不会成功，没关系，回头再检查一遍上边的步骤，看看是不是有些地方设置有误。    <br/>
+接下来对blog进行设置。</p>
+
+<h2>Ocotpress博客配置</h2>
+
+<h3>1、blog的基本设置</h3>
+
+<p>blog的基本设置是在Octopress根目录的主配置文件<code>_config.yml</code>中，所以我们需要修改配置文件<code>_config.yml</code>。</p>
+
+<h3>需要特别说明的是: yml格式默认是：参数 + : + 空格，如果不加空格，编译会报错。</h3>
+
+<pre><code>url: http://wzrong.me   # 博客地址
+title: Wzrong's Blog        # 博客标题
+subtitle: 感受生活，感悟工作，感触心灵.   # 博客副标题
+author: 卫志荣   # 作者
+simple_search: http://google.com/search     # 搜索引擎
+description: 记录并沉淀自己的学习点滴。        # 关于博客的描述
+subscribe_rss: /atom.xml        # Rss订阅地址，默认为 /atom.xml
+email: wzrong@me.com    # Rss订阅的Email地址
+root: /     # 博客路径，默认为 "/"，如果你的blog在子目录中，需要修改这个路径
+permalink: /blog/:year/:month/:day/:title/   # 文章的固定连接形式
+</code></pre>
+
+<h3>2、更换主题</h3>
+
+<p>暂时不换了，换的时候再考虑吧。</p>
+
+<h3>3、添加多说评论</h3>
+
+<p>在 <code>_config.yml</code> 中添加</p>
+
+<pre><code># duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: yourname
+</code></pre>
+
+<p>替换 <code>source/_layouts/post.html</code> 中的 <code>disqus</code> 代码</p>
+
+<pre><code>{ % if site.disqus_short_name and page.comments == true % }
+    &lt;section&gt;
+        &lt;h1&gt;Comments&lt;/h1&gt;
+        &lt;div id="disqus_thread" aria-live="polite"&gt;{ % include post/disqus_thread.html % }&lt;/div&gt;
+    &lt;/section&gt;
+{ % endif % }
+</code></pre>
+
+<p>为下方的 <code>多说评论</code> 模块</p>
+
+<pre><code>{ % if site.duoshuo_short_name and site.duoshuo_comments == true and page.comments == true % }
+    &lt;section&gt;
+        &lt;div id="comments" aria-live="polite"&gt;{ % include post/duoshuo.html % }&lt;/div&gt;
+    &lt;/section&gt;
+{ % endif % }
+</code></pre>
+
+<p>在路径 <code>source/_includes/post/</code> 下创建一个 <code>duoshuo.html</code> 页面，并加入以下代码：</p>
+
+<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
+{ % if site.duoshuo_short_name % }        
+&lt;div class="ds-thread" data-title="{ % if site . title case % }{ % else % }{ % end if % }"&gt;&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    var duoshuoQuery = {short_name:"wzrong"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+&lt;/script&gt;    
+{ % endif % }
+&lt;!-- Duoshuo Comment END --&gt;    
+</code></pre>
+
+<p>然后再修改 <code>source/_layouts/post.html</code> 文件，在标签 <code>&lt;/article&gt;</code> 下边添加以下<code>多说评论</code>代码：</p>
+
+<pre><code>&lt;!-- Duoshuo Comment BEGIN --&gt;
+{ % if site.duoshuo_short_name and page.comments == true % }
+    &lt;section id="comment"&gt;
+        { % include post/duoshuo.html % }
+    &lt;/section&gt;
+{ % endif % }   
+&lt;!-- Duoshuo Comment END --&gt;
+</code></pre>
+
+<p>到此 <code>多说评论</code> 在 Octopress 中已经设置完成，接下来去<a href="http://duoshuo.com">多说网</a>注册一个账号，添加站点，获取 <code>duoshuo_short_name</code>。</p>
+
+<h3>4、添加版权声明</h3>
+
+<p>这里所说的版权声明是指添加在每篇文章后面的版权信息。  <br/>
+首先在 <code>source/_includes/post</code>目录中添加 <code>license.html</code> 文件，内容如下：</p>
+
+<pre><code>&lt;!-- Copyright Info BEGIN --&gt;
+{ % if site.post_license % }
+&lt; p class="post-footer"&gt;
+    原文地址：&lt; a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"&gt; http://wzrong.me/blog/2013/09/10/octopress-blog/ &lt;/a &gt;
+    &lt;br /&gt;
+    &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" &gt;&lt;/a&gt;版权声明：自由转载-非商用-非衍生-保持署名 | &lt;a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" &gt;Creative Commons BY-NC-ND 3.0 &lt;/a&gt; | &lt;img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /&gt;
+&lt;/p&gt;
+{ % endif % }
+&lt;!-- Copyright Info END --&gt;
+</code></pre>
+
+<p>在 <code>sass/custom/</code> 中的 <code>_style.css</code> 文件中添加以下样式来设置版权信息的样式</p>
+
+<pre><code>.post-footer{
+    background: #ccc;
+}
+</code></pre>
+
+<p>修改文件 <code>source/_layouts/post.html</code>，在 <code>{ % include article.html %}</code> 下边添加 <code>{ % include post/license.html % }</code>  <br/>
+在 <code>_config.yml</code> 添加配置项来控制是否显示页面的版权信息</p>
+
+<pre><code># Post License
+post_license: true
+</code></pre>
+
+<p>至此版权信息添加完成，效果与本blog一致。</p>
+
+<blockquote><p>特别说明：文中有遇到 <code>{ %</code> 与 <code>% }</code> 的情况时，请自行把<code>{</code>和<code>%</code>之间的空格去掉。由于编写时候有编译错误，故加了空格，抱歉。</p></blockquote>
+</div>
+
+
+
+  
+<!-- Copyright Info BEGIN -->
+
+<p class="post-footer">
+        原文地址：<a href="http://wzrong.me/blog/2013/09/10/octopress-blog/"> http://wzrong.me/blog/2013/09/10/octopress-blog/ </a>
+        <br />
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"></a>版权声明：自由转载-非商用-非衍生-保持署名 | <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a> | <img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" />
+</p>
+
+<!-- Copyright Info END -->
+
+  
+  <footer>
+    <p class="meta">
+      
+
+  
+
+<span class="byline author vcard">Posted by <span class="fn">卫志荣</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-10T08:30:00+08:00" pubdate data-updated="true">Sep 10<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/markdown/'>Markdown</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
+
+
+    </p>
+
+
+      <div class="sharing">
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+	<span class="jiathis_txt">分享到：</span>
+	<a class="jiathis_button_tools_1"></a>
+	<a class="jiathis_button_tools_2"></a>
+	<a class="jiathis_button_tools_3"></a>
+	<a class="jiathis_button_tools_4"></a>
+	<a href="http://www.jiathis.com/share?uid=1839800" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1362579034296859" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</div>
+
+    
+
+<p class="meta" style="padding-top:30px;">
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/09/12/happy-birthday/" title="Next Post: Happy Birthday">Happy Birthday &raquo;</a>
+      
+    </p>
+
+  </footer>
+
+</article>
+
+<!-- Duoshuo Comment BEGIN -->
+
+  <section id="comment">
+    
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" id="ds-thread"></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"wzrong"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- Duoshuo Comment END -->
+
+  </section>
+	
+<!-- Duoshuo Comment END -->
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/28/yan-se-xuan-qu-he-zhuan-huan-xiao-gong-ju/">颜色选取和转换小工具</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/16/dian-xing-de-wu-chong-yan-gao-xing-shi/">典型的五种广告形式：CPC、CPM、CPA、CPS、CPT</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/12/happy-birthday/">Happy Birthday</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/10/octopress-blog/">Octopress Blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+<section>
+<h1>Categories</h1>
+<ul>
+  <li><a href='/blog/categories/ads'>Ads (1)</a></li>
+  <li><a href='/blog/categories/life'>Life (1)</a></li>
+  <li><a href='/blog/categories/markdown'>Markdown (1)</a></li>
+  <li><a href='/blog/categories/octopress'>Octopress (1)</a></li>
+  <li><a href='/blog/categories/颜色'>颜色 (1)</a></li>
+</ul>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo">
+<p>
+  Copyright &copy; 2014 - 卫志荣 -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+</body>
+</html>

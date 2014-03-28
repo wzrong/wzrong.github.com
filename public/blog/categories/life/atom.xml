@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Life | Wzrong's Blog]]></title>
+  <link href="http://wzrong.me/blog/categories/life/atom.xml" rel="self"/>
+  <link href="http://wzrong.me/"/>
+  <updated>2014-03-28T12:46:11+08:00</updated>
+  <id>http://wzrong.me/</id>
+  <author>
+    <name><![CDATA[卫志荣]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Happy Birthday]]></title>
+    <link href="http://wzrong.me/blog/2013/09/12/happy-birthday/"/>
+    <updated>2013-09-12T08:30:00+08:00</updated>
+    <id>http://wzrong.me/blog/2013/09/12/happy-birthday</id>
+    <content type="html"><![CDATA[<p>祝自己生日快乐！ Happy Birthday！</p>
+]]></content>
+  </entry>
+  
+</feed>
